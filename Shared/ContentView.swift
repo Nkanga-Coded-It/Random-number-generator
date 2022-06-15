@@ -6,11 +6,45 @@
 //
 
 import SwiftUI
-
+    
 struct ContentView: View {
+    
+     @State var dsiplayedNumber = 0
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        
+        VStack {
+            Text(String(dsiplayedNumber))
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .bold()
+                .padding(.top, 200)
+                
+                
+        Spacer()
+            
+            VStack {
+                Button("Button") {
+                    let randNumber = Int.random(in: 3...100)
+                    
+                    
+                    dsiplayedNumber = randNumber
+                    
+                }
+                .padding()
+                .frame(width: 150, height: 50)
+                .foregroundColor(.white)
+                .background(.red)
+                .cornerRadius(15)
+                
+                .padding(.bottom, 130)
+            }
+        }
+           
+        
+        
+        
     }
 }
 
