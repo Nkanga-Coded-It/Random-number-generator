@@ -14,31 +14,37 @@ struct ContentView: View {
     var body: some View {
         
         
-        VStack {
-            Text(String(dsiplayedNumber))
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .bold()
-                .padding(.top, 200)
-                
-                
-        Spacer()
+        ZStack {
+            Color(red: 0.31, green: 0.47, blue: 0.31)
+                .edgesIgnoringSafeArea(.all)
             
             VStack {
-                Button("Button") {
-                    let randNumber = Int.random(in: 1...100)
+                Text(String(dsiplayedNumber))
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .fontWeight(.bold)
+                    .bold()
+                    .padding(.top, 200)
                     
                     
-                    dsiplayedNumber = randNumber
-                    
-                }
-                .padding()
-                .frame(width: 150, height: 50)
-                .foregroundColor(.white)
-                .background(.red)
-                .cornerRadius(15)
+            Spacer()
                 
-                .padding(.bottom, 130)
+                VStack {
+                    Button("Button") {
+                        let randNumber = Int.random(in: 1...100)
+                        
+                        
+                        dsiplayedNumber = randNumber
+                        
+                    }
+                    .padding()
+                    .frame(width: 150, height: 50)
+                    .foregroundColor(.black)
+                    .background(.white)
+                    .cornerRadius(15)
+                    
+                    .padding(.bottom, 130)
+                }
             }
         }
            
