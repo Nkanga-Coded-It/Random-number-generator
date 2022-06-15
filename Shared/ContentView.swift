@@ -26,7 +26,7 @@ struct ContentView: View {
             
             VStack {
                 Button("Button") {
-                    let randNumber = Int.random(in: 3...100)
+                    let randNumber = Int.random(in: 1...100)
                     
                     
                     dsiplayedNumber = randNumber
