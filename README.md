@@ -1,4 +1,6 @@
-# Preview
+# Random Number Generator
+
+A simple ios app that generates a random number from 1 to 100
 
 ##### 🔨Technologies: SwiftUI
 ##### 🚀Platform: 📱iOS
